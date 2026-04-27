@@ -1,0 +1,62 @@
+name: Auto-generate bundle & docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "presets/**"
+      - "scripts/generate_bundle.py"
+      - "scripts/generate_docs_data.py"
+      - "docs/data.js"
+      - ".github/workflows/build-bundle.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-bundle
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Rebuild all-presets.json + docs/data.js
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate all-presets.json
+        run: python scripts/generate_bundle.py
+
+      - name: Generate docs/data.js (PRESETS list)
+        run: python scripts/generate_docs_data.py
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet -- all-presets.json docs/data.js; then
+            echo "✅ Nothing to commit — already up to date."
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add all-presets.json docs/data.js
+          git commit -m "chore: regenerate bundle & docs data [skip ci]"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          count=$(ls presets/*.json 2>/dev/null | wc -l)
+          echo "## Auto-build" >> $GITHUB_STEP_SUMMARY
+          echo "- Presets in repo: **$count**" >> $GITHUB_STEP_SUMMARY
+          echo "- Updated: \`all-presets.json\`, \`docs/data.js\`" >> $GITHUB_STEP_SUMMARY

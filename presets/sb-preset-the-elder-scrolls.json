@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "key": "custom-the-elder-scrolls",
+  "name": "The Elder Scrolls",
+  "global": {
+    "intensity": 3,
+    "threshold": 70,
+    "dutyPercent": 80,
+    "cooldown": 20
+  },
+  "slots": [
+    {
+      "value": "forest",
+      "display": "Forest",
+      "labels": [
+        "forest",
+        "trees",
+        "woods",
+        "wilderness",
+        "woodland",
+        "maple",
+        "grove"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#006400",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "grass",
+      "display": "Grass",
+      "labels": [
+        "grass",
+        "meadow",
+        "pasture",
+        "lawn",
+        "grassland",
+        "snow"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#7CFC00",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "flowers",
+      "display": "Flowers",
+      "labels": [
+        "flowers",
+        "blossom",
+        "garden",
+        "flowerbed",
+        "flowergarden",
+        "flowerfield",
+        "grass"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#FF69B4",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "desert",
+      "display": "Desert",
+      "labels": [
+        "desert",
+        "sand",
+        "dunes",
+        "oasis",
+        "flowers"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#C2B280",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "dirt",
+      "display": "Dirt",
+      "labels": [
+        "dirt",
+        "mud"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#8B4513",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "rain",
+      "display": "Rain",
+      "labels": [
+        "rain",
+        "shower",
+        "water",
+        "hay"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#1E90FF",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "smoke",
+      "display": "Smoke",
+      "labels": [
+        "smoke",
+        "fumes",
+        "ashes",
+        "campfire",
+        "embers",
+        "fire",
+        "cave"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#708090",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "gunpowder",
+      "display": "Gunpowder",
+      "labels": [
+        "gunpowder",
+        "explosion",
+        "blast",
+        "sea"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#2F4F4F",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "temple",
+      "display": "Temple",
+      "labels": [
+        "temple",
+        "ruins",
+        "altar",
+        "leaves"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#D2B48C",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    },
+    {
+      "value": "brakes",
+      "display": "Brakes",
+      "labels": [
+        "brakes",
+        "metal",
+        "mechanism",
+        "engineering",
+        "gear",
+        "machine",
+        "desert"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#C0C0C0",
+      "intensity": 3,
+      "dutyPercent": 80,
+      "cooldown": 20
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/loony2392/scentbar-game-presets/schemas/scents-schema.json",
+  "title": "ScentBar Available Scents",
+  "description": "Schema for the scents.json definition file.",
+  "type": "object",
+  "required": ["version", "description", "scents"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "single": { "$ref": "#/definitions/priceEntry" },
+        "pack5": { "$ref": "#/definitions/priceEntry" },
+        "pack10": { "$ref": "#/definitions/priceEntry" }
+      }
+    },
+    "scents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/scent"
+      }
+    }
+  },
+  "definitions": {
+    "priceEntry": {
+      "type": "object",
+      "required": ["amount", "currency", "unit"],
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "unit": { "type": "string" }
+      }
+    },
+    "scent": {
+      "type": "object",
+      "required": ["id", "name", "description", "color", "category"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["nature", "food", "action", "fantasy", "mechanical", "material", "social"]
+        }
+      }
+    }
+  }
+}

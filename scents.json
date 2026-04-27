@@ -1,0 +1,185 @@
+{
+  "$schema": "./schemas/scents-schema.json",
+  "version": 1,
+  "description": "All available ScentBar ScentPods that can be used in presets.",
+  "pricing": {
+    "single": {
+      "amount": 2,
+      "currency": "EUR",
+      "unit": "1 pod"
+    },
+    "pack5": {
+      "amount": 9,
+      "currency": "EUR",
+      "unit": "5 pods"
+    },
+    "pack10": {
+      "amount": 16,
+      "currency": "EUR",
+      "unit": "10 pods"
+    }
+  },
+  "scents": [
+    {
+      "id": "bakery",
+      "name": "Bakery",
+      "description": "Fresh-baked bread, pastries, and warm oven aromas.",
+      "color": "#D2691E",
+      "category": "food"
+    },
+    {
+      "id": "brakes",
+      "name": "Brakes",
+      "description": "Hot brake pads, rubber, and asphalt from high-speed action.",
+      "color": "#333333",
+      "category": "mechanical"
+    },
+    {
+      "id": "cave",
+      "name": "Cave",
+      "description": "Damp stone, underground minerals, and cool subterranean air.",
+      "color": "#5C4033",
+      "category": "nature"
+    },
+    {
+      "id": "coffee",
+      "name": "Coffee",
+      "description": "Rich roasted coffee beans, espresso, and café atmosphere.",
+      "color": "#6F4E37",
+      "category": "food"
+    },
+    {
+      "id": "desert",
+      "name": "Desert",
+      "description": "Dry heat, sun-baked sand, and arid wind.",
+      "color": "#EDC9AF",
+      "category": "nature"
+    },
+    {
+      "id": "dirt",
+      "name": "Dirt",
+      "description": "Fresh earth, mud, and soil after rain.",
+      "color": "#9B7653",
+      "category": "nature"
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "description": "Electric ozone, charged plasma, and high-voltage sparks.",
+      "color": "#00FFFF",
+      "category": "fantasy"
+    },
+    {
+      "id": "flowers",
+      "name": "Flowers",
+      "description": "Blooming roses, fresh petals, and garden fragrances.",
+      "color": "#FF69B4",
+      "category": "nature"
+    },
+    {
+      "id": "forest",
+      "name": "Forest",
+      "description": "Pine trees, damp moss, and deep woodland air.",
+      "color": "#006400",
+      "category": "nature"
+    },
+    {
+      "id": "grass",
+      "name": "Grass",
+      "description": "Freshly cut grass, open meadows, and green fields.",
+      "color": "#7CFC00",
+      "category": "nature"
+    },
+    {
+      "id": "gunpowder",
+      "name": "Gunpowder",
+      "description": "Spent cartridges, gunfire residue, and black powder.",
+      "color": "#696969",
+      "category": "action"
+    },
+    {
+      "id": "hay",
+      "name": "Hay",
+      "description": "Dried straw, barn atmosphere, and harvest fields.",
+      "color": "#E8D44D",
+      "category": "nature"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "description": "Medicinal herbs, eucalyptus, and healing aromas.",
+      "color": "#FF0000",
+      "category": "fantasy"
+    },
+    {
+      "id": "leather",
+      "name": "Leather",
+      "description": "Tanned leather, saddles, and aged hide.",
+      "color": "#8B4513",
+      "category": "material"
+    },
+    {
+      "id": "leaves",
+      "name": "Leaves",
+      "description": "Autumn foliage, fallen leaves, and crisp fall air.",
+      "color": "#FF8C00",
+      "category": "nature"
+    },
+    {
+      "id": "new-car",
+      "name": "New Car",
+      "description": "Fresh vehicle interior, dashboard, and showroom scent.",
+      "color": "#C0C0C0",
+      "category": "mechanical"
+    },
+    {
+      "id": "perfume",
+      "name": "Perfume",
+      "description": "Elegant fragrance, luxury, and nightlife atmosphere.",
+      "color": "#FF00FF",
+      "category": "social"
+    },
+    {
+      "id": "rain",
+      "name": "Rain",
+      "description": "Petrichor, wet pavement, and fresh storm air.",
+      "color": "#4682B4",
+      "category": "nature"
+    },
+    {
+      "id": "sea",
+      "name": "Sea",
+      "description": "Ocean breeze, salty waves, and coastal wind.",
+      "color": "#006994",
+      "category": "nature"
+    },
+    {
+      "id": "smoke",
+      "name": "Smoke",
+      "description": "Wood fire, campfire, and burning embers.",
+      "color": "#808080",
+      "category": "action"
+    },
+    {
+      "id": "snow",
+      "name": "Snow",
+      "description": "Crisp winter air, frost, and icy mountain breeze.",
+      "color": "#F0F0FF",
+      "category": "nature"
+    },
+    {
+      "id": "temple",
+      "name": "Temple",
+      "description": "Ancient incense, sacred stone, and mystical sanctuaries.",
+      "color": "#DAA520",
+      "category": "fantasy"
+    },
+    {
+      "id": "victory",
+      "name": "Victory",
+      "description": "Champagne fizz, celebration, and triumphant glory.",
+      "color": "#FFD700",
+      "category": "fantasy"
+    }
+  ]
+}

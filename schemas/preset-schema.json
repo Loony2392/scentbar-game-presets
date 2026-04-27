@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/loony2392/scentbar-game-presets/schemas/preset-schema.json",
+  "title": "ScentBar Game Preset",
+  "description": "Schema for ScentBar game scent preset files.",
+  "type": "object",
+  "required": ["version", "key", "name", "global", "slots"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Schema version."
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^custom-[a-z0-9-]+$",
+      "description": "Unique preset ID, format custom-<slug>."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name of the game."
+    },
+    "global": { "$ref": "#/definitions/global" },
+    "slots": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of scent slots used by this preset.",
+      "items": { "$ref": "#/definitions/slot" }
+    }
+  },
+  "definitions": {
+    "global": {
+      "type": "object",
+      "required": ["intensity", "threshold", "dutyPercent", "cooldown"],
+      "additionalProperties": false,
+      "properties": {
+        "intensity":   { "type": "integer", "minimum": 1, "maximum": 10 },
+        "threshold":   { "type": "integer", "minimum": 0, "maximum": 100 },
+        "dutyPercent": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "cooldown":    { "type": "integer", "minimum": 1 }
+      }
+    },
+    "slot": {
+      "type": "object",
+      "required": [
+        "value", "display", "labels",
+        "threshold", "enabled", "color",
+        "intensity", "dutyPercent", "cooldown"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "description": "Scent ID (must exist in scents.json)."
+        },
+        "display": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable scent name (must match scents.json)."
+        },
+        "labels": {
+          "type": "array",
+          "minItems": 3,
+          "description": "AI vision keywords that trigger this scent. Minimum 3.",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "threshold":   { "type": "integer", "minimum": 0, "maximum": 100 },
+        "enabled":     { "type": "boolean" },
+        "color":       { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "intensity":   { "type": "integer", "minimum": 1, "maximum": 10 },
+        "dutyPercent": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "cooldown":    { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

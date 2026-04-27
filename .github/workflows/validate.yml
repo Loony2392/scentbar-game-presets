@@ -1,0 +1,73 @@
+name: Validate Presets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "presets/**"
+      - "schemas/**"
+      - "scents.json"
+      - "scripts/validate_presets.py"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "presets/**"
+      - "schemas/**"
+      - "scents.json"
+      - "scripts/validate_presets.py"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: JSON + Schema validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install jsonschema
+
+      - name: Validate JSON syntax
+        run: |
+          for f in presets/*.json; do
+            [ -f "$f" ] || continue
+            python -c "import json,sys; json.load(open('$f',encoding='utf-8'))" \
+              || { echo "::error file=$f::Invalid JSON"; exit 1; }
+          done
+
+      - name: Validate schema (jsonschema)
+        run: |
+          python - <<'PY'
+          import json, glob, sys
+          import jsonschema
+          schema = json.load(open("schemas/preset-schema.json", encoding="utf-8"))
+          fail = 0
+          for f in sorted(glob.glob("presets/*.json")):
+              data = json.load(open(f, encoding="utf-8"))
+              try:
+                  jsonschema.validate(data, schema)
+                  print(f"OK    {f}")
+              except jsonschema.ValidationError as e:
+                  fail += 1
+                  print(f"FAIL  {f}: {e.message}")
+                  print(f"::error file={f}::{e.message}")
+          sys.exit(1 if fail else 0)
+          PY
+
+      - name: Validate semantics (scent ids, labels, ranges)
+        run: python scripts/validate_presets.py
+
+      - name: Summary
+        if: always()
+        run: |
+          count=$(ls presets/*.json 2>/dev/null | wc -l)
+          echo "## ScentBar preset validation" >> $GITHUB_STEP_SUMMARY
+          echo "- Presets checked: **$count**" >> $GITHUB_STEP_SUMMARY
+          echo "- Schema: \`schemas/preset-schema.json\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Rules: each slot needs a valid scent id, ≥3 unique labels, valid ranges." >> $GITHUB_STEP_SUMMARY
