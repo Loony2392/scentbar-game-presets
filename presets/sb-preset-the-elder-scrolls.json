@@ -87,7 +87,8 @@
       "display": "Dirt",
       "labels": [
         "dirt",
-        "mud"
+        "mud",
+        "earth"
       ],
       "threshold": 70,
       "enabled": true,

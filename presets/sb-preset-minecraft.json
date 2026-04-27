@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "key": "Minecraft",
+  "key": "custom-minecraft",
   "name": "Minecraft",
   "global": {
     "intensity": 3,
@@ -14,7 +14,8 @@
       "display": "Forest",
       "labels": [
         "forest",
-        "tree"
+        "tree",
+        "woods"
       ],
       "threshold": 75,
       "enabled": true,
@@ -27,7 +28,9 @@
       "value": "snow",
       "display": "Snow",
       "labels": [
-        "snow"
+        "snow",
+        "snowy biome",
+        "ice"
       ],
       "threshold": 75,
       "enabled": true,
@@ -40,7 +43,9 @@
       "value": "grass",
       "display": "Grass",
       "labels": [
-        "grass"
+        "grass",
+        "plains",
+        "meadow"
       ],
       "threshold": 81,
       "enabled": true,
@@ -53,7 +58,9 @@
       "value": "flowers",
       "display": "Flowers",
       "labels": [
-        "flowers"
+        "flowers",
+        "poppy",
+        "flower field"
       ],
       "threshold": 75,
       "enabled": true,
@@ -66,7 +73,9 @@
       "value": "dirt",
       "display": "Dirt",
       "labels": [
-        "dirt"
+        "dirt",
+        "dirt block",
+        "mud"
       ],
       "threshold": 83,
       "enabled": true,
@@ -80,7 +89,8 @@
       "display": "Hay",
       "labels": [
         "hay",
-        "hay bale"
+        "hay bale",
+        "wheat"
       ],
       "threshold": 75,
       "enabled": true,
@@ -93,7 +103,9 @@
       "value": "cave",
       "display": "Cave",
       "labels": [
-        "cave"
+        "cave",
+        "stone",
+        "cobblestone"
       ],
       "threshold": 81,
       "enabled": true,
@@ -106,7 +118,9 @@
       "value": "sea",
       "display": "Sea",
       "labels": [
-        "sea"
+        "sea",
+        "ocean",
+        "water"
       ],
       "threshold": 75,
       "enabled": true,
