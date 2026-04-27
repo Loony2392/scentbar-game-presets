@@ -31,16 +31,24 @@ The official ScentBar app and ScentPods are available at
 
 ## Available presets
 
-This repo is just getting started. Currently shipping:
+<!-- PRESETS:START -->
+**3 presets** available:
 
-- **Battlefield 6** — `presets/sb-preset-battlefield6.json`
+| Game | File | Slots |
+|------|------|-------|
+| Battlefield 6 | [`presets/sb-preset-battlefield6.json`](presets/sb-preset-battlefield6.json) | 10 |
+| Minecraft | [`presets/sb-preset-minecraft.json`](presets/sb-preset-minecraft.json) | 10 |
+| The Elder Scrolls | [`presets/sb-preset-the-elder-scrolls.json`](presets/sb-preset-the-elder-scrolls.json) | 10 |
+<!-- PRESETS:END -->
 
 More games are coming. **PRs very welcome** — see
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Available scents
 
-23 ScentPods are referenced. The full catalogue with descriptions, colors and
+<!-- SCENTS:START -->
+**23 ScentPods**
+<!-- SCENTS:END --> are referenced. The full catalogue with descriptions, colors and
 categories lives in [`scents.json`](scents.json) — that's also the source of
 truth for the validator.
 

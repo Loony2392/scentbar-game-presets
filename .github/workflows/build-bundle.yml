@@ -5,9 +5,12 @@ on:
     branches: [main]
     paths:
       - "presets/**"
+      - "scents.json"
       - "scripts/generate_bundle.py"
       - "scripts/generate_docs_data.py"
+      - "scripts/generate_readme.py"
       - "docs/data.js"
+      - "README.md"
       - ".github/workflows/build-bundle.yml"
   workflow_dispatch:
 
@@ -40,17 +43,20 @@ jobs:
       - name: 🌐 Generate docs/data.js (PRESETS list)
         run: python scripts/generate_docs_data.py
 
+      - name: � Update README (preset list + scent count)
+        run: python scripts/generate_readme.py
+
       - name: 🚀 Commit & push if changed
         run: |
-          if git diff --quiet -- all-presets.json docs/data.js; then
+          if git diff --quiet -- all-presets.json docs/data.js README.md; then
             echo "✅ Nothing to commit — already up to date."
             exit 0
           fi
 
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add all-presets.json docs/data.js
-          git commit -m "🤖 chore: regenerate bundle & docs data [skip ci]"
+          git add all-presets.json docs/data.js README.md
+          git commit -m "🤖 chore: regenerate bundle, docs & README [skip ci]"
           git push
 
       - name: 📊 Summary
@@ -59,4 +65,4 @@ jobs:
           count=$(ls presets/*.json 2>/dev/null | wc -l)
           echo "## 📦 Auto-build" >> $GITHUB_STEP_SUMMARY
           echo "- 🎮 Presets in repo: **$count**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔄 Updated: \`all-presets.json\`, \`docs/data.js\`" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔄 Updated: \`all-presets.json\`, \`docs/data.js\`, \`README.md\`" >> $GITHUB_STEP_SUMMARY
