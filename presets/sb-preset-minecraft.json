@@ -15,7 +15,15 @@
       "labels": [
         "forest",
         "tree",
-        "woods"
+        "woods",
+        "oak tree",
+        "birch tree",
+        "spruce tree",
+        "jungle",
+        "taiga",
+        "dark forest",
+        "log",
+        "sapling"
       ],
       "threshold": 75,
       "enabled": true,
@@ -30,7 +38,14 @@
       "labels": [
         "snow",
         "snowy biome",
-        "ice"
+        "ice",
+        "snow block",
+        "snowy plains",
+        "frozen ocean",
+        "ice spikes",
+        "powder snow",
+        "igloo",
+        "snowy taiga"
       ],
       "threshold": 75,
       "enabled": true,
@@ -45,7 +60,13 @@
       "labels": [
         "grass",
         "plains",
-        "meadow"
+        "meadow",
+        "grass block",
+        "tall grass",
+        "savanna",
+        "sunflower plains",
+        "green field",
+        "pasture"
       ],
       "threshold": 81,
       "enabled": true,
@@ -60,7 +81,15 @@
       "labels": [
         "flowers",
         "poppy",
-        "flower field"
+        "flower field",
+        "dandelion",
+        "rose",
+        "tulip",
+        "sunflower",
+        "lilac",
+        "flower forest",
+        "azalea",
+        "cherry blossom"
       ],
       "threshold": 75,
       "enabled": true,
@@ -75,7 +104,14 @@
       "labels": [
         "dirt",
         "dirt block",
-        "mud"
+        "mud",
+        "coarse dirt",
+        "podzol",
+        "rooted dirt",
+        "farmland",
+        "soil",
+        "path block",
+        "mycelium"
       ],
       "threshold": 83,
       "enabled": true,
@@ -90,7 +126,13 @@
       "labels": [
         "hay",
         "hay bale",
-        "wheat"
+        "wheat",
+        "wheat field",
+        "wheat crop",
+        "straw",
+        "barn",
+        "village farm",
+        "haystack"
       ],
       "threshold": 75,
       "enabled": true,
@@ -105,7 +147,18 @@
       "labels": [
         "cave",
         "stone",
-        "cobblestone"
+        "cobblestone",
+        "deepslate",
+        "dripstone cave",
+        "lush cave",
+        "mineshaft",
+        "ravine",
+        "underground",
+        "tunnel",
+        "ore",
+        "granite",
+        "andesite",
+        "diorite"
       ],
       "threshold": 81,
       "enabled": true,
@@ -120,7 +173,15 @@
       "labels": [
         "sea",
         "ocean",
-        "water"
+        "water",
+        "river",
+        "lake",
+        "beach",
+        "deep ocean",
+        "warm ocean",
+        "coral reef",
+        "shipwreck",
+        "ocean monument"
       ],
       "threshold": 75,
       "enabled": true,
@@ -135,7 +196,14 @@
       "labels": [
         "leaves",
         "autumn leaves",
-        "brown leaves"
+        "brown leaves",
+        "oak leaves",
+        "birch leaves",
+        "jungle leaves",
+        "spruce leaves",
+        "foliage",
+        "bush",
+        "vines"
       ],
       "threshold": 75,
       "enabled": true,
@@ -151,7 +219,17 @@
         "smoke",
         "fire",
         "lava",
-        "desert"
+        "desert",
+        "nether",
+        "netherrack",
+        "soul sand",
+        "basalt delta",
+        "campfire",
+        "furnace",
+        "explosion",
+        "tnt",
+        "blaze",
+        "ghast"
       ],
       "threshold": 80,
       "enabled": true,
