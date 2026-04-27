@@ -1,7 +1,7 @@
 {
   "kind": "scentbar-preset-bundle",
   "version": 1,
-  "generatedAt": "2026-04-27T19:55:54Z",
+  "generatedAt": "2026-04-27T20:46:51Z",
   "count": 16,
   "presets": [
     {
@@ -4316,20 +4316,21 @@
             "log",
             "branch",
             "stump",
-            "moss"
+            "moss",
+            "trees"
           ],
-          "threshold": 75,
+          "threshold": 70,
           "enabled": true,
           "color": "#006400",
-          "intensity": 5,
+          "intensity": 4,
           "dutyPercent": 100,
           "cooldown": 14
         },
         {
-          "value": "smoke",
-          "display": "Smoke",
+          "value": "gunpowder",
+          "display": "Gunpowder",
           "labels": [
-            "Smoke",
+            "Gunpowder",
             "fire",
             "dragon",
             "flame",
@@ -4345,7 +4346,7 @@
             "fireplace",
             "ash"
           ],
-          "threshold": 75,
+          "threshold": 70,
           "enabled": true,
           "color": "#A9A9A9",
           "intensity": 4,
@@ -4372,11 +4373,11 @@
             "stalactite",
             "stalagmite"
           ],
-          "threshold": 75,
+          "threshold": 71,
           "enabled": true,
           "color": "#808080",
           "intensity": 4,
-          "dutyPercent": 100,
+          "dutyPercent": 80,
           "cooldown": 14
         },
         {
@@ -4399,7 +4400,7 @@
             "sandstorm",
             "canyon"
           ],
-          "threshold": 75,
+          "threshold": 72,
           "enabled": true,
           "color": "#EDC9AF",
           "intensity": 4,
@@ -4429,7 +4430,7 @@
           "threshold": 75,
           "enabled": true,
           "color": "#D4A574",
-          "intensity": 5,
+          "intensity": 4,
           "dutyPercent": 80,
           "cooldown": 12
         },
@@ -4462,11 +4463,10 @@
         },
         {
           "value": "energy",
-          "display": "Energy",
+          "display": "energy",
           "labels": [
             "Energy",
             "magic",
-            "mana",
             "arcane",
             "spell",
             "enchant",
@@ -4505,9 +4505,10 @@
             "shrub",
             "bush",
             "prairie",
-            "steppe"
+            "steppe",
+            "park"
           ],
-          "threshold": 75,
+          "threshold": 70,
           "enabled": true,
           "color": "#7CFC00",
           "intensity": 4,
