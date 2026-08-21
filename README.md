@@ -34,14 +34,26 @@ The official ScentBar app and ScentPods are available at
 ## Available presets
 
 <!-- PRESETS:START -->
-**4 presets** available:
+**16 presets** available:
 
 | Game | File | Slots |
 |------|------|-------|
-| Battlefield 6 | [`presets/sb-preset-battlefield6.json`](presets/sb-preset-battlefield6.json) | 10 |
-| Fortnite | [`presets/sb-preset-fortnite.json`](presets/sb-preset-fortnite.json) | 10 |
-| Minecraft | [`presets/sb-preset-minecraft.json`](presets/sb-preset-minecraft.json) | 10 |
-| World of Warcraft | [`presets/sb-preset-world-of-warcraft.json`](presets/sb-preset-world-of-warcraft.json) | 10 |
+| Battlefield 6 - Experimental | [`presets/battlefield-6/sb-preset-battlefield6-experimental.json`](presets/battlefield-6/sb-preset-battlefield6-experimental.json) | 10 |
+| Battlefield 6 - High Detail | [`presets/battlefield-6/sb-preset-battlefield6-high-detail.json`](presets/battlefield-6/sb-preset-battlefield6-high-detail.json) | 10 |
+| Battlefield 6 - Performance | [`presets/battlefield-6/sb-preset-battlefield6-performance.json`](presets/battlefield-6/sb-preset-battlefield6-performance.json) | 10 |
+| Battlefield 6 - Standard | [`presets/battlefield-6/sb-preset-battlefield6-standard.json`](presets/battlefield-6/sb-preset-battlefield6-standard.json) | 10 |
+| Fortnite - Experimental | [`presets/fortnite/sb-preset-fortnite-experimental.json`](presets/fortnite/sb-preset-fortnite-experimental.json) | 10 |
+| Fortnite - High Detail | [`presets/fortnite/sb-preset-fortnite-high-detail.json`](presets/fortnite/sb-preset-fortnite-high-detail.json) | 10 |
+| Fortnite - Performance | [`presets/fortnite/sb-preset-fortnite-performance.json`](presets/fortnite/sb-preset-fortnite-performance.json) | 10 |
+| Fortnite - Standard | [`presets/fortnite/sb-preset-fortnite-standard.json`](presets/fortnite/sb-preset-fortnite-standard.json) | 10 |
+| Minecraft - Experimental | [`presets/minecraft/sb-preset-minecraft-experimental.json`](presets/minecraft/sb-preset-minecraft-experimental.json) | 10 |
+| Minecraft - High Detail | [`presets/minecraft/sb-preset-minecraft-high-detail.json`](presets/minecraft/sb-preset-minecraft-high-detail.json) | 10 |
+| Minecraft - Performance | [`presets/minecraft/sb-preset-minecraft-performance.json`](presets/minecraft/sb-preset-minecraft-performance.json) | 10 |
+| Minecraft - Standard | [`presets/minecraft/sb-preset-minecraft-standard.json`](presets/minecraft/sb-preset-minecraft-standard.json) | 10 |
+| World of Warcraft - Experimental | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-experimental.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-experimental.json) | 10 |
+| World of Warcraft - High Detail | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-high-detail.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-high-detail.json) | 10 |
+| World of Warcraft - Performance | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-performance.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-performance.json) | 10 |
+| World of Warcraft - Standard | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-standard.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-standard.json) | 10 |
 <!-- PRESETS:END -->
 
 More games are coming. **PRs very welcome** — see
@@ -86,7 +98,7 @@ Rules: `key` must match `^custom-[a-z0-9-]+$`, every `value` must exist in
 ## Repository layout
 
 ```
-presets/                  # one JSON file per game
+presets/                  # one folder per game, one or more profiles each
 scents.json               # canonical list of all available ScentPods
 schemas/
   preset-schema.json      # JSON Schema (draft-07) for presets

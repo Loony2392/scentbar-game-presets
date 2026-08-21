@@ -7,26 +7,32 @@ import sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PRESET_GLOB = os.path.join(ROOT, "presets", "sb-preset-*.json")
+PRESET_GLOB = os.path.join(ROOT, "presets", "**", "*.json")
 OUTPUT = os.path.join(ROOT, "all-presets.json")
 
 
 def main():
-    files = sorted(glob.glob(PRESET_GLOB))
+    files = sorted(glob.glob(PRESET_GLOB, recursive=True))
     if not files:
         print("::warning::No presets found in presets/ — nothing to bundle")
         # still write an empty bundle so the file exists
     presets = []
+    preset_files = []
     for path in files:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         presets.append(data)
+        preset_files.append({
+            "key": data.get("key"),
+            "file": os.path.relpath(path, os.path.join(ROOT, "presets")).replace(os.sep, "/"),
+        })
 
     bundle = {
         "kind": "scentbar-preset-bundle",
         "version": 1,
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "count": len(presets),
+        "presetFiles": preset_files,
         "presets": presets,
     }
 

@@ -15,7 +15,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README = os.path.join(ROOT, "README.md")
 SCENTS_FILE = os.path.join(ROOT, "scents.json")
-PRESET_GLOB = os.path.join(ROOT, "presets", "sb-preset-*.json")
+PRESET_GLOB = os.path.join(ROOT, "presets", "**", "*.json")
 
 PRESETS_START = "<!-- PRESETS:START -->"
 PRESETS_END = "<!-- PRESETS:END -->"
@@ -25,12 +25,12 @@ SCENTS_END = "<!-- SCENTS:END -->"
 
 def load_presets():
     items = []
-    for path in sorted(glob.glob(PRESET_GLOB)):
+    for path in sorted(glob.glob(PRESET_GLOB, recursive=True)):
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         items.append({
             "name": data.get("name") or os.path.basename(path),
-            "file": os.path.basename(path),
+            "file": os.path.relpath(path, os.path.join(ROOT, "presets")).replace(os.sep, "/"),
             "slots": len(data.get("slots", [])),
         })
     items.sort(key=lambda e: e["name"].lower())

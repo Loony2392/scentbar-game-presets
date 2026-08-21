@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "key": "custom-battlefield-6",
-  "name": "Battlefield 6",
+  "key": "custom-battlefield-6-standard",
+  "name": "Battlefield 6 - Standard",
   "slots": [
     {
       "value": "gunpowder",

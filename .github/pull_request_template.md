@@ -3,12 +3,12 @@
 ## Game
 
 - **Title:** <!-- e.g. Battlefield 6 -->
-- **Filename:** `presets/sb-preset-<slug>.json`
+- **Filename:** `presets/<game>/sb-preset-<profile>.json`
 - **Preset key:** `custom-<slug>`
 
 ## Checklist
 
-- [ ] File is named `sb-preset-<slug>.json` and lives in `presets/`
+- [ ] File is named `sb-preset-<profile>.json` and lives in `presets/<game>/`
 - [ ] `version` is `1`
 - [ ] `key` matches `^custom-[a-z0-9-]+$` and is unique
 - [ ] `name` is the official game title
