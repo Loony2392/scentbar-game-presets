@@ -51,8 +51,8 @@
         },
         "labels": {
           "type": "array",
-          "minItems": 3,
-          "description": "AI vision keywords that trigger this scent. Minimum 3.",
+          "minItems": 4,
+          "description": "AI vision keywords that trigger this scent. Minimum 4.",
           "items": { "type": "string", "minLength": 1 }
         },
         "threshold":   { "type": "integer", "minimum": 0, "maximum": 100 },

@@ -10,7 +10,7 @@ Checks:
     5. Each slot has required keys with valid types/ranges
     6. slot.value matches a scent.id from scents.json
     7. slot.display matches the matching scent.name
-    8. slot.labels: minimum 3, no empty strings, no duplicates (case-insensitive)
+    8. slot.labels: minimum 4, no empty strings, no duplicates (case-insensitive)
     9. Color values are valid hex (#RRGGBB)
 
 Exit code 0 = all valid, 1 = errors found.
@@ -89,8 +89,8 @@ def validate_slot(slot, idx, scents):
     if not isinstance(labels, list):
         errors.append(f"{p}.labels must be an array")
     else:
-        if len(labels) < 3:
-            errors.append(f"{p}.labels has {len(labels)} entries (minimum 3)")
+        if len(labels) < 4:
+            errors.append(f"{p}.labels has {len(labels)} entries (minimum 4)")
         for i, lbl in enumerate(labels):
             if not isinstance(lbl, str) or not lbl.strip():
                 errors.append(f"{p}.labels[{i}] empty or not a string")
