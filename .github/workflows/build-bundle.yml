@@ -7,9 +7,7 @@ on:
       - "scents.json"
       - "scripts/generate_bundle.py"
       - "scripts/generate_docs_data.py"
-      - "scripts/generate_readme.py"
       - "docs/data.js"
-      - "README.md"
       - ".github/workflows/build-bundle.yml"
   workflow_dispatch:
 
@@ -38,19 +36,16 @@ jobs:
       - name: 📜 Generate all-presets.json
         run: python scripts/generate_bundle.py
 
-      - name: 🌐 Generate docs/data.js (PRESETS list)
+      - name: 🌐 Generate docs/data.js (fallback data)
         run: python scripts/generate_docs_data.py
-
-      - name: � Update README (preset list + scent count)
-        run: python scripts/generate_readme.py
 
       - name: 🔍 Check generated files
         run: |
-          if git diff --quiet --ignore-matching-lines='^[[:space:]]*"generatedAt":' -- all-presets.json docs/data.js README.md; then
+          if git diff --quiet --ignore-matching-lines='^[[:space:]]*"generatedAt":' -- all-presets.json docs/data.js; then
             echo "✅ Generated files are up to date."
           else
             echo "❌ Generated files are stale. Run the generation scripts and commit the result."
-            git diff -- all-presets.json docs/data.js README.md
+            git diff -- all-presets.json docs/data.js
             exit 1
           fi
 
@@ -60,4 +55,4 @@ jobs:
           count=$(find presets -type f -name '*.json' | wc -l)
           echo "## 📦 Auto-build" >> $GITHUB_STEP_SUMMARY
           echo "- 🎮 Presets in repo: **$count**" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔄 Updated: \`all-presets.json\`, \`docs/data.js\`, \`README.md\`" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔄 Checked: \`all-presets.json\`, \`docs/data.js\`" >> $GITHUB_STEP_SUMMARY

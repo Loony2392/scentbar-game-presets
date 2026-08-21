@@ -31,41 +31,9 @@ woods, victory when you win.
 The official ScentBar app and ScentPods are available at
 **[zestum.tech](https://zestum.tech/)**.
 
-## Available presets
-
-<!-- PRESETS:START -->
-**16 presets** available:
-
-| Game | File | Slots |
-|------|------|-------|
-| Battlefield 6 - Experimental | [`presets/battlefield-6/sb-preset-battlefield6-experimental.json`](presets/battlefield-6/sb-preset-battlefield6-experimental.json) | 10 |
-| Battlefield 6 - High Detail | [`presets/battlefield-6/sb-preset-battlefield6-high-detail.json`](presets/battlefield-6/sb-preset-battlefield6-high-detail.json) | 10 |
-| Battlefield 6 - Performance | [`presets/battlefield-6/sb-preset-battlefield6-performance.json`](presets/battlefield-6/sb-preset-battlefield6-performance.json) | 10 |
-| Battlefield 6 - Standard | [`presets/battlefield-6/sb-preset-battlefield6-standard.json`](presets/battlefield-6/sb-preset-battlefield6-standard.json) | 10 |
-| Fortnite - Experimental | [`presets/fortnite/sb-preset-fortnite-experimental.json`](presets/fortnite/sb-preset-fortnite-experimental.json) | 10 |
-| Fortnite - High Detail | [`presets/fortnite/sb-preset-fortnite-high-detail.json`](presets/fortnite/sb-preset-fortnite-high-detail.json) | 10 |
-| Fortnite - Performance | [`presets/fortnite/sb-preset-fortnite-performance.json`](presets/fortnite/sb-preset-fortnite-performance.json) | 10 |
-| Fortnite - Standard | [`presets/fortnite/sb-preset-fortnite-standard.json`](presets/fortnite/sb-preset-fortnite-standard.json) | 10 |
-| Minecraft - Experimental | [`presets/minecraft/sb-preset-minecraft-experimental.json`](presets/minecraft/sb-preset-minecraft-experimental.json) | 10 |
-| Minecraft - High Detail | [`presets/minecraft/sb-preset-minecraft-high-detail.json`](presets/minecraft/sb-preset-minecraft-high-detail.json) | 10 |
-| Minecraft - Performance | [`presets/minecraft/sb-preset-minecraft-performance.json`](presets/minecraft/sb-preset-minecraft-performance.json) | 10 |
-| Minecraft - Standard | [`presets/minecraft/sb-preset-minecraft-standard.json`](presets/minecraft/sb-preset-minecraft-standard.json) | 10 |
-| World of Warcraft - Experimental | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-experimental.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-experimental.json) | 10 |
-| World of Warcraft - High Detail | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-high-detail.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-high-detail.json) | 10 |
-| World of Warcraft - Performance | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-performance.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-performance.json) | 10 |
-| World of Warcraft - Standard | [`presets/world-of-warcraft/sb-preset-world-of-warcraft-standard.json`](presets/world-of-warcraft/sb-preset-world-of-warcraft-standard.json) | 10 |
-<!-- PRESETS:END -->
-
-More games are coming. **PRs very welcome** — see
-[CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Available scents
-
-<!-- SCENTS:START -->
-**25 ScentPods**
-<!-- SCENTS:END --> are referenced. The full catalogue with descriptions, colors and
-categories lives in [`scents.json`](scents.json) — that's also the source of
-truth for the validator.
+Preset profiles are organized by game under [`presets/`](presets/) and are
+displayed dynamically on the GitHub Pages site. The ScentPod catalogue is
+maintained in [`scents.json`](scents.json) and loaded dynamically as well.
 
 ## Preset format (short version)
 
