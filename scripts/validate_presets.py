@@ -4,15 +4,14 @@ Validate all ScentBar preset files.
 
 Checks:
   1. Valid JSON syntax
-  2. Required top-level keys: version, key, name, global, slots
+    2. Required top-level keys: version, key, name, slots
   3. version == 1
   4. key matches ^custom-[a-z0-9-]+$
-  5. global has intensity/threshold/dutyPercent/cooldown in valid ranges
-  6. Each slot has required keys with valid types/ranges
-  7. slot.value matches a scent.id from scents.json
-  8. slot.display matches the matching scent.name
-  9. slot.labels: minimum 3, no empty strings, no duplicates (case-insensitive)
- 10. Color values are valid hex (#RRGGBB)
+    5. Each slot has required keys with valid types/ranges
+    6. slot.value matches a scent.id from scents.json
+    7. slot.display matches the matching scent.name
+    8. slot.labels: minimum 3, no empty strings, no duplicates (case-insensitive)
+    9. Color values are valid hex (#RRGGBB)
 
 Exit code 0 = all valid, 1 = errors found.
 """
@@ -30,8 +29,7 @@ PRESET_GLOB = os.path.join(ROOT, "presets", "sb-preset-*.json")
 HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
 KEY_RE = re.compile(r"^custom-[a-z0-9-]+$")
 
-REQUIRED_TOP = {"version", "key", "name", "global", "slots"}
-REQUIRED_GLOBAL = {"intensity", "threshold", "dutyPercent", "cooldown"}
+REQUIRED_TOP = {"version", "key", "name", "slots"}
 REQUIRED_SLOT = {
     "value", "display", "labels",
     "threshold", "enabled", "color",
@@ -54,25 +52,6 @@ def check_int(value, lo, hi, label):
     if value < lo or value > hi:
         return [f"{label}={value} out of range ({lo}–{hi})"]
     return []
-
-
-def validate_global(g):
-    errors = []
-    if not isinstance(g, dict):
-        return ["'global' must be an object"]
-    missing = REQUIRED_GLOBAL - set(g.keys())
-    if missing:
-        errors.append(f"global: missing keys {sorted(missing)}")
-    extra = set(g.keys()) - REQUIRED_GLOBAL
-    if extra:
-        errors.append(f"global: unknown keys {sorted(extra)}")
-    errors += check_int(g.get("intensity"),   1,   10,  "global.intensity")
-    errors += check_int(g.get("threshold"),   0,   100, "global.threshold")
-    errors += check_int(g.get("dutyPercent"), 1,   100, "global.dutyPercent")
-    cooldown = g.get("cooldown")
-    if not isinstance(cooldown, int) or isinstance(cooldown, bool) or cooldown < 1:
-        errors.append(f"global.cooldown={cooldown!r} must be integer >= 1")
-    return errors
 
 
 def validate_slot(slot, idx, scents):
@@ -172,8 +151,6 @@ def validate_preset(filepath, scents):
     name = data.get("name", "")
     if not isinstance(name, str) or not name.strip():
         errors.append("name is empty")
-
-    errors.extend(validate_global(data.get("global", {})))
 
     slots = data.get("slots", [])
     if not isinstance(slots, list):

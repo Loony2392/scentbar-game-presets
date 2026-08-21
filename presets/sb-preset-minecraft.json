@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-minecraft",
   "name": "Minecraft",
-  "global": {
-    "intensity": 3,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "forest",

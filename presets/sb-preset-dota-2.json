@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-dota-2",
   "name": "Dota 2",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "forest",

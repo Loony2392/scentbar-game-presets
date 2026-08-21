@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-world-of-warcraft",
   "name": "World of Warcraft",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "forest",

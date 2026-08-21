@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-overwatch-2",
   "name": "Overwatch 2",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "gunpowder",

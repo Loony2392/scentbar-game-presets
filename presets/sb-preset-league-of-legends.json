@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-league-of-legends",
   "name": "League of Legends",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "forest",

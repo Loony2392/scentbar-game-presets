@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-the-elder-scrolls",
   "name": "The Elder Scrolls",
-  "global": {
-    "intensity": 3,
-    "threshold": 70,
-    "dutyPercent": 80,
-    "cooldown": 20
-  },
   "slots": [
     {
       "value": "forest",
