@@ -34,25 +34,13 @@ The official ScentBar app and ScentPods are available at
 ## Available presets
 
 <!-- PRESETS:START -->
-**16 presets** available:
+**4 presets** available:
 
 | Game | File | Slots |
 |------|------|-------|
-| Apex Legends | [`presets/sb-preset-apex-legends.json`](presets/sb-preset-apex-legends.json) | 10 |
 | Battlefield 6 | [`presets/sb-preset-battlefield6.json`](presets/sb-preset-battlefield6.json) | 10 |
-| Call of Duty | [`presets/sb-preset-call-of-duty.json`](presets/sb-preset-call-of-duty.json) | 10 |
-| Counter-Strike 2 | [`presets/sb-preset-counter-strike-2.json`](presets/sb-preset-counter-strike-2.json) | 10 |
-| Cyberpunk 2077 | [`presets/sb-preset-cyberpunk2077.json`](presets/sb-preset-cyberpunk2077.json) | 10 |
-| Dota 2 | [`presets/sb-preset-dota-2.json`](presets/sb-preset-dota-2.json) | 10 |
 | Fortnite | [`presets/sb-preset-fortnite.json`](presets/sb-preset-fortnite.json) | 10 |
-| GTA 5 | [`presets/sb-preset-gta-5.json`](presets/sb-preset-gta-5.json) | 10 |
-| Helldivers 2 | [`presets/sb-preset-helldivers-2.json`](presets/sb-preset-helldivers-2.json) | 10 |
-| League of Legends | [`presets/sb-preset-league-of-legends.json`](presets/sb-preset-league-of-legends.json) | 10 |
 | Minecraft | [`presets/sb-preset-minecraft.json`](presets/sb-preset-minecraft.json) | 10 |
-| Overwatch 2 | [`presets/sb-preset-overwatch-2.json`](presets/sb-preset-overwatch-2.json) | 10 |
-| Rainbow Six Siege | [`presets/sb-preset-rainbow-six-siege.json`](presets/sb-preset-rainbow-six-siege.json) | 10 |
-| The Elder Scrolls | [`presets/sb-preset-the-elder-scrolls.json`](presets/sb-preset-the-elder-scrolls.json) | 10 |
-| Valorant | [`presets/sb-preset-valorant.json`](presets/sb-preset-valorant.json) | 10 |
 | World of Warcraft | [`presets/sb-preset-world-of-warcraft.json`](presets/sb-preset-world-of-warcraft.json) | 10 |
 <!-- PRESETS:END -->
 
@@ -91,7 +79,7 @@ truth for the validator.
 ```
 
 Rules: `key` must match `^custom-[a-z0-9-]+$`, every `value` must exist in
-`scents.json`, and **every slot needs at least 3 unique labels**. Full spec in
+`scents.json`, and **every slot needs at least 4 unique labels**. Full spec in
 [CONTRIBUTING.md](CONTRIBUTING.md) and
 [`schemas/preset-schema.json`](schemas/preset-schema.json).
 
