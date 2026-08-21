@@ -77,11 +77,25 @@
       "category": "nature"
     },
     {
+      "id": "farm",
+      "name": "Farm",
+      "description": "Barns, crop fields, tractors, and open farmland.",
+      "color": "#A67C3B",
+      "category": "nature"
+    },
+    {
       "id": "forest",
       "name": "Forest",
       "description": "Pine trees, damp moss, and deep woodland air.",
       "color": "#006400",
       "category": "nature"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel",
+      "description": "Gas stations, fuel pumps, tanks, and engine exhaust.",
+      "color": "#FF7700",
+      "category": "mechanical"
     },
     {
       "id": "grass",
