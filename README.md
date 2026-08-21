@@ -50,7 +50,7 @@ More games are coming. **PRs very welcome** — see
 ## Available scents
 
 <!-- SCENTS:START -->
-**23 ScentPods**
+**25 ScentPods**
 <!-- SCENTS:END --> are referenced. The full catalogue with descriptions, colors and
 categories lives in [`scents.json`](scents.json) — that's also the source of
 truth for the validator.
