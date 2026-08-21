@@ -2,6 +2,12 @@
   "version": 1,
   "key": "custom-fortnite",
   "name": "Fortnite",
+  "global": {
+    "intensity": 6,
+    "threshold": 71,
+    "dutyPercent": 100,
+    "cooldown": 8
+  },
   "slots": [
     {
       "value": "grass",
