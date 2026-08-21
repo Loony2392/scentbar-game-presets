@@ -71,4 +71,4 @@ jobs:
           echo "## 🧪 ScentBar preset validation" >> $GITHUB_STEP_SUMMARY
           echo "- 🎮 Presets checked: **$count**" >> $GITHUB_STEP_SUMMARY
           echo "- 📋 Schema: \`schemas/preset-schema.json\`" >> $GITHUB_STEP_SUMMARY
-          echo "- 📐 Rules: each slot needs a valid scent id, ≥3 unique labels, valid ranges." >> $GITHUB_STEP_SUMMARY
+          echo "- 📐 Rules: each slot needs a valid scent id, ≥4 unique labels, valid ranges." >> $GITHUB_STEP_SUMMARY
