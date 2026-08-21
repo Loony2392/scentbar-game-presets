@@ -21,12 +21,6 @@ Every preset is a single JSON file matching
   "version": 1,
   "key": "custom-<slug>",
   "name": "<Game Title>",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "gunpowder",
@@ -50,7 +44,6 @@ Every preset is a single JSON file matching
 | `version` | always `1` |
 | `key` | `custom-<slug>`, lowercase, hyphens, unique across the repo |
 | `name` | official game title |
-| `global.*` | see ranges below |
 | `slots` | at least one slot |
 | `slots[].value` | must exist in [`scents.json`](scents.json) |
 | `slots[].display` | must match the scent's `name` from `scents.json` |
