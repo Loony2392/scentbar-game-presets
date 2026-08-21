@@ -223,12 +223,31 @@ body {
   transition: border-color .2s, background .2s;
 }
 #search:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,.06); }
+#profile-filter {
+  min-width: 190px; padding: 14px 18px; border-radius: var(--radius);
+  background: rgba(255,255,255,.04); color: var(--fg);
+  border: 1px solid var(--line); font-size: 15px;
+}
+#profile-filter:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,.06); }
+#profile-filter option { background: #171126; color: var(--fg); }
 .count { color: var(--muted); font-size: 14px; }
 
 .preset-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
 }
+.preset-game {
+  padding: 18px; border-radius: var(--radius); border: 1px solid var(--line);
+  background: rgba(255,255,255,.025);
+}
+.preset-game h3 { margin: 0 0 14px; font-size: 17px; }
+.profile-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.profile-tag {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px;
+  border-radius: 999px; border: 1px solid var(--line); color: var(--fg-dim);
+  background: rgba(255,255,255,.04); font-size: 13px; transition: border-color .2s, color .2s;
+}
+.profile-tag:hover { color: var(--fg); border-color: var(--accent); }
 .preset {
   display: block; padding: 14px 16px; border-radius: var(--radius);
   border: 1px solid var(--line); background: rgba(255,255,255,.025);

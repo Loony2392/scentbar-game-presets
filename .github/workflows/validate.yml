@@ -36,11 +36,11 @@ jobs:
 
       - name: ✅ Validate JSON syntax
         run: |
-          for f in presets/*.json; do
+          while IFS= read -r -d '' f; do
             [ -f "$f" ] || continue
             python -c "import json,sys; json.load(open('$f',encoding='utf-8'))" \
               || { echo "::error file=$f::Invalid JSON"; exit 1; }
-          done
+          done < <(find presets -type f -name '*.json' -print0)
 
       - name: 🧩 Validate schema (jsonschema)
         run: |
@@ -49,7 +49,7 @@ jobs:
           import jsonschema
           schema = json.load(open("schemas/preset-schema.json", encoding="utf-8"))
           fail = 0
-          for f in sorted(glob.glob("presets/*.json")):
+          for f in sorted(glob.glob("presets/**/*.json", recursive=True)):
               data = json.load(open(f, encoding="utf-8"))
               try:
                   jsonschema.validate(data, schema)
@@ -67,7 +67,7 @@ jobs:
       - name: 📊 Summary
         if: always()
         run: |
-          count=$(ls presets/*.json 2>/dev/null | wc -l)
+          count=$(find presets -type f -name '*.json' | wc -l)
           echo "## 🧪 ScentBar preset validation" >> $GITHUB_STEP_SUMMARY
           echo "- 🎮 Presets checked: **$count**" >> $GITHUB_STEP_SUMMARY
           echo "- 📋 Schema: \`schemas/preset-schema.json\`" >> $GITHUB_STEP_SUMMARY

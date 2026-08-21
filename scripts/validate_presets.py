@@ -24,7 +24,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCENTS_FILE = os.path.join(ROOT, "scents.json")
-PRESET_GLOB = os.path.join(ROOT, "presets", "sb-preset-*.json")
+PRESET_GLOB = os.path.join(ROOT, "presets", "**", "*.json")
 
 HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
 KEY_RE = re.compile(r"^custom-[a-z0-9-]+$")
@@ -165,7 +165,7 @@ def validate_preset(filepath, scents):
 
 
 def main():
-    files = sorted(glob.glob(PRESET_GLOB))
+    files = sorted(glob.glob(PRESET_GLOB, recursive=True))
     if not files:
         print("::warning::No preset files found in presets/")
         return 0
@@ -181,7 +181,7 @@ def main():
     total_errors = 0
 
     for path in files:
-        name = os.path.basename(path)
+        name = os.path.relpath(path, ROOT).replace(os.sep, "/")
         errors = validate_preset(path, scents)
         if errors:
             failed += 1
@@ -189,7 +189,7 @@ def main():
             print(f"FAIL  {name}")
             for e in errors:
                 print(f"      {e}")
-                print(f"::error file=presets/{name}::{e}")
+                print(f"::error file={name}::{e}")
         else:
             print(f"OK    {name}")
 

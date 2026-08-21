@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "key": "custom-fortnite",
-  "name": "Fortnite",
+  "key": "custom-fortnite-experimental",
+  "name": "Fortnite - Experimental",
   "slots": [
     {
       "value": "grass",

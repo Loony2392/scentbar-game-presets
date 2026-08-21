@@ -16,17 +16,22 @@ This folder contains the static landing site that ships with the repo.
 |---|---|
 | `index.html` | The landing page |
 | `style.css`  | Aurora / Celestia-inspired theme |
-| `data.js`    | Static list of scents + presets (no build step required) |
+| `data.js`    | Generated fallback data for scents + presets |
 | `app.js`     | Search filter and DOM rendering |
 | `.nojekyll`  | Tells Pages to serve files as-is |
 
-## Updating the preset list
+## Updating scents and profiles
 
-When you add a new preset under `presets/`, also add a one-liner to the
-`PRESETS` array in `data.js`:
+Add scents to `scents.json`. Add profiles under a game folder in `presets/`,
+for example:
 
 ```js
-["Game Display Name", "sb-preset-game-slug.json"],
+presets/
+   game-name/
+      sb-preset-game-standard.json
+      sb-preset-game-performance.json
 ```
 
-That's it — no build, no framework, no dependencies.
+The Pages app loads `scents.json` and `all-presets.json` directly from the
+`main` branch on every page load. The build workflow keeps the bundle and
+fallback data current automatically.

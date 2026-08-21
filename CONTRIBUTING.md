@@ -5,15 +5,16 @@ Thanks for helping build the ScentBar community preset library! 🌿
 ## Quick start
 
 1. **Fork** this repo
-2. Copy an existing file in [`presets/`](presets/) as a template
-3. Rename it `sb-preset-<your-game-slug>.json`
-4. Fill in the fields (see schema below)
-5. Run the validator locally: `python scripts/validate_presets.py`
-6. Open a Pull Request — the CI will validate again automatically
+2. Create or open the game's folder under [`presets/`](presets/)
+3. Copy an existing profile as a template and name it `sb-preset-<profile>.json`
+4. Use a unique key for each profile, such as `custom-game-standard`
+5. Fill in the fields (see schema below)
+6. Run the validator locally: `python scripts/validate_presets.py`
+7. Open a Pull Request — the CI will validate again automatically
 
 ## Preset format
 
-Every preset is a single JSON file matching
+Every preset profile is a JSON file inside its game's folder matching
 [`schemas/preset-schema.json`](schemas/preset-schema.json).
 
 ```json

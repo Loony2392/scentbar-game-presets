@@ -62,7 +62,7 @@ jobs:
       - name: 📊 Summary
         if: always()
         run: |
-          count=$(ls presets/*.json 2>/dev/null | wc -l)
+          count=$(find presets -type f -name '*.json' | wc -l)
           echo "## 📦 Auto-build" >> $GITHUB_STEP_SUMMARY
           echo "- 🎮 Presets in repo: **$count**" >> $GITHUB_STEP_SUMMARY
           echo "- 🔄 Updated: \`all-presets.json\`, \`docs/data.js\`, \`README.md\`" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "key": "custom-battlefield-6-performance",
+  "name": "Battlefield 6 - Performance",
+  "slots": [
+    {
+      "value": "gunpowder",
+      "display": "Gunpowder",
+      "labels": [
+        "gunpowder",
+        "explosion",
+        "fire",
+        "burning",
+        "burning vehicle",
+        "muzzle flash"
+      ],
+      "threshold": 74,
+      "enabled": true,
+      "color": "#616161",
+      "intensity": 4,
+      "dutyPercent": 80,
+      "cooldown": 8
+    },
+    {
+      "value": "smoke",
+      "display": "Smoke",
+      "labels": [
+        "smoke",
+        "shooting",
+        "dust",
+        "smoke grenade"
+      ],
+      "threshold": 72,
+      "enabled": true,
+      "color": "#90A4AE",
+      "intensity": 4,
+      "dutyPercent": 100,
+      "cooldown": 8
+    },
+    {
+      "value": "desert",
+      "display": "Desert",
+      "labels": [
+        "desert",
+        "sand",
+        "dunes",
+        "cactus"
+      ],
+      "threshold": 75,
+      "enabled": true,
+      "color": "#EDC9AF",
+      "intensity": 4,
+      "dutyPercent": 100,
+      "cooldown": 8
+    },
+    {
+      "value": "grass",
+      "display": "Grass",
+      "labels": [
+        "grass",
+        "leaves",
+        "open field",
+        "meadow"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#7CFC00",
+      "intensity": 4,
+      "dutyPercent": 100,
+      "cooldown": 8
+    },
+    {
+      "value": "dirt",
+      "display": "Dirt",
+      "labels": [
+        "dirt",
+        "mud",
+        "ground",
+        "dirt road"
+      ],
+      "threshold": 72,
+      "enabled": true,
+      "color": "#8B4513",
+      "intensity": 4,
+      "dutyPercent": 80,
+      "cooldown": 8
+    },
+    {
+      "value": "cave",
+      "display": "Cave",
+      "labels": [
+        "cave",
+        "underground",
+        "stone wall",
+        "rock"
+      ],
+      "threshold": 72,
+      "enabled": true,
+      "color": "#E1E1E1",
+      "intensity": 4,
+      "dutyPercent": 80,
+      "cooldown": 8
+    },
+    {
+      "value": "forest",
+      "display": "Forest",
+      "labels": [
+        "forest",
+        "tree",
+        "bushes",
+        "branches"
+      ],
+      "threshold": 70,
+      "enabled": true,
+      "color": "#006400",
+      "intensity": 4,
+      "dutyPercent": 100,
+      "cooldown": 8
+    },
+    {
+      "value": "leather",
+      "display": "Leather",
+      "labels": [
+        "leather",
+        "uniform",
+        "soldier gear",
+        "boots"
+      ],
+      "threshold": 75,
+      "enabled": true,
+      "color": "#6D4C41",
+      "intensity": 4,
+      "dutyPercent": 80,
+      "cooldown": 8
+    },
+    {
+      "value": "victory",
+      "display": "Victory",
+      "labels": [
+        "victory",
+        "win",
+        "celebration",
+        "confetti"
+      ],
+      "threshold": 73,
+      "enabled": true,
+      "color": "#F4D9A5",
+      "intensity": 6,
+      "dutyPercent": 100,
+      "cooldown": 9
+    },
+    {
+      "value": "health",
+      "display": "Health",
+      "labels": [
+        "health",
+        "medkit",
+        "first aid",
+        "healing"
+      ],
+      "threshold": 73,
+      "enabled": true,
+      "color": "#C0B283",
+      "intensity": 4,
+      "dutyPercent": 100,
+      "cooldown": 8
+    }
+  ]
+}
