@@ -74,7 +74,6 @@ truth for the validator.
   "version": 1,
   "key": "custom-<slug>",
   "name": "<Game Title>",
-  "global":  { "intensity": 4, "threshold": 75, "dutyPercent": 100, "cooldown": 8 },
   "slots":   [
     {
       "value": "gunpowder",
