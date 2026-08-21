@@ -2,12 +2,6 @@
   "version": 1,
   "key": "custom-call-of-duty",
   "name": "Call of Duty",
-  "global": {
-    "intensity": 4,
-    "threshold": 75,
-    "dutyPercent": 100,
-    "cooldown": 8
-  },
   "slots": [
     {
       "value": "gunpowder",
