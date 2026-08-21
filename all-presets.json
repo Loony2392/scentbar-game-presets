@@ -1,7 +1,7 @@
 {
   "kind": "scentbar-preset-bundle",
   "version": 1,
-  "generatedAt": "2026-08-21T19:45:34Z",
+  "generatedAt": "2026-08-21T19:54:00Z",
   "count": 4,
   "presets": [
     {
@@ -49,7 +49,8 @@
           "labels": [
             "desert",
             "sand",
-            "dunes"
+            "dunes",
+            "cactus"
           ],
           "threshold": 75,
           "enabled": true,
@@ -80,7 +81,8 @@
           "labels": [
             "dirt",
             "mud",
-            "ground"
+            "ground",
+            "dirt road"
           ],
           "threshold": 72,
           "enabled": true,
@@ -95,7 +97,8 @@
           "labels": [
             "cave",
             "underground",
-            "stone wall"
+            "stone wall",
+            "rock"
           ],
           "threshold": 72,
           "enabled": true,
@@ -110,7 +113,8 @@
           "labels": [
             "forest",
             "tree",
-            "bushes"
+            "bushes",
+            "branches"
           ],
           "threshold": 70,
           "enabled": true,
@@ -125,7 +129,8 @@
           "labels": [
             "leather",
             "uniform",
-            "soldier gear"
+            "soldier gear",
+            "boots"
           ],
           "threshold": 75,
           "enabled": true,
@@ -140,7 +145,8 @@
           "labels": [
             "victory",
             "win",
-            "celebration"
+            "celebration",
+            "confetti"
           ],
           "threshold": 73,
           "enabled": true,
