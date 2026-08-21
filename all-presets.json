@@ -1,7 +1,7 @@
 {
   "kind": "scentbar-preset-bundle",
   "version": 1,
-  "generatedAt": "2026-08-21T19:04:36Z",
+  "generatedAt": "2026-08-21T19:20:10Z",
   "count": 16,
   "presets": [
     {
@@ -3155,19 +3155,7 @@
           "display": "Gunpowder",
           "labels": [
             "gunpowder",
-            "military base",
-            "army base",
-            "weapons depot",
-            "industrial area",
-            "factory",
-            "warehouse",
-            "damaged building",
-            "street barricade",
-            "security gate",
-            "gun",
-            "shooting",
-            "muzzle flash",
-            "turret"
+            "shooting"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3181,20 +3169,7 @@
           "display": "Smoke",
           "labels": [
             "smoke",
-            "burning building",
-            "fire",
-            "flames",
-            "burned vehicle",
-            "burning wreckage",
-            "industrial chimney",
-            "factory smoke",
-            "campfire",
-            "torch",
-            "fireplace",
-            "ash",
-            "foggy street",
-            "dust cloud",
-            "explosion"
+            "fire"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3208,20 +3183,7 @@
           "display": "Energy",
           "labels": [
             "energy",
-            "neon sign",
-            "bright lights",
-            "electric wires",
-            "power station",
-            "computer screens",
-            "laboratory",
-            "science lab",
-            "blue light",
-            "green light",
-            "glowing panel",
-            "laser beam",
-            "electric sparks",
-            "energy shield",
-            "barrier"
+            "laser"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3235,20 +3197,7 @@
           "display": "Desert",
           "labels": [
             "desert",
-            "sand",
-            "sand dunes",
-            "canyon",
-            "rocky canyon",
-            "cactus",
-            "dry road",
-            "desert village",
-            "desert ruins",
-            "sunny landscape",
-            "dusty ground",
-            "arid landscape",
-            "red rocks",
-            "sandstone building",
-            "dry riverbed"
+            "canyon"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3262,20 +3211,7 @@
           "display": "Rain",
           "labels": [
             "rain",
-            "wet pavement",
-            "puddles",
-            "storm clouds",
-            "dark clouds",
-            "wet building",
-            "waterfall",
-            "river",
-            "harbor",
-            "water canal",
-            "rain drops",
-            "foggy street",
-            "stormy sky",
-            "flooded road",
-            "wet bridge"
+            "rainy street"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3289,20 +3225,7 @@
           "display": "Snow",
           "labels": [
             "snow",
-            "snow covered road",
-            "snow covered building",
-            "ice",
-            "frost",
-            "glacier",
-            "tundra",
-            "icicles",
-            "snowstorm",
-            "snow piles",
-            "icy ground",
-            "frozen lake",
-            "arctic base",
-            "snowy mountain",
-            "frozen waterfall"
+            "snowy landscape"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3312,28 +3235,15 @@
           "cooldown": 14
         },
         {
-          "value": "health",
-          "display": "Health",
+          "value": "temple",
+          "display": "Temple",
           "labels": [
-            "health",
-            "hospital room",
-            "clinic",
-            "medical station",
-            "first aid station",
-            "medkit",
-            "health pack",
-            "first aid kit",
-            "red cross",
-            "green cross",
-            "medical supplies",
-            "hospital hallway",
-            "white medical cabinet",
-            "healing station",
-            "medicine shelf"
+            "temple",
+            "temple courtyard"
           ],
           "threshold": 75,
           "enabled": true,
-          "color": "#00CED1",
+          "color": "#DAA520",
           "intensity": 6,
           "dutyPercent": 100,
           "cooldown": 8
@@ -3343,20 +3253,7 @@
           "display": "Flowers",
           "labels": [
             "flowers",
-            "cherry blossom tree",
-            "cherry blossom garden",
-            "flower petals",
-            "rose garden",
-            "orchid garden",
-            "lily pond",
-            "flower bed",
-            "greenhouse",
-            "park",
-            "courtyard garden",
-            "bouquet",
-            "pink flowers",
-            "red flowers",
-            "flowering tree"
+            "flower garden"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3370,20 +3267,7 @@
           "display": "Forest",
           "labels": [
             "forest",
-            "tree",
-            "jungle",
-            "dense forest",
-            "forest path",
-            "tree canopy",
-            "grove",
-            "branches",
-            "thicket",
-            "vines",
-            "bush",
-            "pine trees",
-            "woodland",
-            "forest floor",
-            "overgrown ruins"
+            "tree"
           ],
           "threshold": 75,
           "enabled": true,
@@ -3393,24 +3277,11 @@
           "cooldown": 14
         },
         {
-          "value": "victory",
-          "display": "Victory",
+          "value": "sea",
+          "display": "Sea",
           "labels": [
-            "victory",
-            "award ceremony",
-            "podium",
-            "gold medal",
-            "medal display",
-            "celebration hall",
-            "fireworks in the sky",
-            "confetti",
-            "bright stage",
-            "spotlights",
-            "golden statue",
-            "banner",
-            "flags",
-            "winner podium",
-            "victory screen"
+            "sea",
+            "harbor"
           ],
           "threshold": 75,
           "enabled": true,
