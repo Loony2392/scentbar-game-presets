@@ -47,7 +47,7 @@ Every preset is a single JSON file matching
 | `slots` | at least one slot |
 | `slots[].value` | must exist in [`scents.json`](scents.json) |
 | `slots[].display` | must match the scent's `name` from `scents.json` |
-| `slots[].labels` | **minimum 3 unique labels**, lowercase preferred |
+| `slots[].labels` | **minimum 8 unique labels**, lowercase preferred |
 | `slots[].color` | `#RRGGBB` hex |
 
 ### Numeric ranges
