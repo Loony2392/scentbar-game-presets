@@ -1,9 +1,10 @@
 # ScentBar Game Presets
 
-![ZESTUM - Trailer](assets/zestum_trailer.gif)
 [![Validate Presets](https://github.com/loony2392/scentbar-game-presets/actions/workflows/validate.yml/badge.svg)](https://github.com/loony2392/scentbar-game-presets/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+![ZESTUM - Trailer](assets/zestum_trailer.gif)
 
 Community-built scent presets for the **[ScentBar by Zestum](https://zestum.tech/)** —
 the hardware that diffuses real-world scents synced to what's happening on your
