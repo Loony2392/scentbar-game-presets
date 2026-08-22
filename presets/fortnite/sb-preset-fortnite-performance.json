@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "key": "custom-fortnite-performance",
-  "name": "Fortnite - Performance",
+  "key": "custom-fortnite",
+  "name": "Fortnite",
   "slots": [
     {
       "value": "grass",
@@ -9,31 +9,25 @@
       "labels": [
         "grass",
         "meadow",
-        "lawn",
         "field",
         "turf",
         "hay",
-        "weeds",
         "clover",
         "shrub",
         "hedge",
-        "grassland",
-        "plains",
-        "pasture",
         "greenery",
         "blades",
         "straw",
         "thicket",
-        "undergrowth",
         "moss patch",
-        "wild grass"
+        "grass field"
       ],
-      "threshold": 70,
+      "threshold": 71,
       "enabled": true,
       "color": "#28D90E",
       "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 13
+      "cooldown": 9
     },
     {
       "value": "forest",
@@ -41,33 +35,30 @@
       "labels": [
         "forest",
         "tree",
-        "bush",
         "leaves",
         "pine",
         "log",
         "moss",
         "branch",
-        "trunk",
-        "foliage",
         "woodland",
         "canopy",
-        "fern",
         "stump",
-        "bark",
-        "conifer",
-        "oak",
         "forest floor",
         "twig",
         "root",
         "plants",
-        "wood"
+        "wood",
+        "dried tree",
+        "shrub",
+        "tree trunk",
+        "bush"
       ],
-      "threshold": 73,
+      "threshold": 75,
       "enabled": true,
       "color": "#006308",
       "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 13
+      "cooldown": 10
     },
     {
       "value": "dirt",
@@ -76,7 +67,6 @@
         "dirt",
         "mud",
         "dust",
-        "soil",
         "path",
         "rock",
         "gravel",
@@ -84,22 +74,19 @@
         "ground",
         "terrain",
         "trail",
-        "dust cloud",
         "dirt road",
         "sand",
-        "pebble",
         "boulder",
-        "quarry",
         "cliff",
-        "excavation",
         "crater",
-        "cave"
+        "cave",
+        "muddy"
       ],
-      "threshold": 70,
+      "threshold": 68,
       "enabled": true,
       "color": "#8B6914",
-      "intensity": 6,
-      "dutyPercent": 80,
+      "intensity": 4,
+      "dutyPercent": 100,
       "cooldown": 7
     },
     {
@@ -115,9 +102,7 @@
         "smoke cloud",
         "wildfire",
         "burning",
-        "ember",
         "soot",
-        "campfire",
         "smokestack",
         "haze",
         "gunpowder",
@@ -127,12 +112,12 @@
         "smog",
         "blue fire"
       ],
-      "threshold": 70,
+      "threshold": 71,
       "enabled": true,
       "color": "#EDC9AF",
-      "intensity": 6,
+      "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 7
+      "cooldown": 8
     },
     {
       "value": "sea",
@@ -158,9 +143,9 @@
       "threshold": 70,
       "enabled": true,
       "color": "#0078FF",
-      "intensity": 6,
+      "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 8
+      "cooldown": 7
     },
     {
       "value": "fuel",
@@ -169,11 +154,9 @@
         "fuel",
         "gasoline",
         "tank",
-        "oil",
         "gas station",
         "canister",
         "barrel",
-        "refinery",
         "pipeline",
         "diesel",
         "fuel tank",
@@ -191,9 +174,9 @@
       "threshold": 72,
       "enabled": true,
       "color": "#FF7700",
-      "intensity": 6,
+      "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 7
+      "cooldown": 8
     },
     {
       "value": "rain",
@@ -212,20 +195,23 @@
         "fog",
         "raindrop",
         "overcast",
-        "umbrella",
         "flood",
         "damp",
         "humidity",
         "splash",
         "gray sky",
-        "wind"
+        "wind",
+        "drink",
+        "tropical",
+        "fountain",
+        "waterfall"
       ],
-      "threshold": 73,
+      "threshold": 70,
       "enabled": true,
       "color": "#4FC3F7",
-      "intensity": 7,
+      "intensity": 5,
       "dutyPercent": 100,
-      "cooldown": 8
+      "cooldown": 10
     },
     {
       "value": "victory",
@@ -250,14 +236,17 @@
         "glory",
         "healing",
         "level",
-        "EP"
+        "EP",
+        "loot",
+        "golden chest",
+        "LVL"
       ],
-      "threshold": 72,
+      "threshold": 71,
       "enabled": true,
       "color": "#F4D9A5",
-      "intensity": 8,
+      "intensity": 5,
       "dutyPercent": 100,
-      "cooldown": 10
+      "cooldown": 9
     },
     {
       "value": "snow",
@@ -285,8 +274,8 @@
       "threshold": 69,
       "enabled": true,
       "color": "#6BA8FF",
-      "intensity": 7,
-      "dutyPercent": 80,
+      "intensity": 5,
+      "dutyPercent": 100,
       "cooldown": 8
     },
     {
@@ -300,13 +289,10 @@
         "silo",
         "fence",
         "hay",
-        "tractor",
         "cornfield",
         "farmhouse",
         "haystack",
-        "livestock",
         "pasture",
-        "windmill",
         "scarecrow",
         "plow",
         "orchard",
@@ -314,15 +300,16 @@
         "farmland",
         "pumpkin",
         "chest",
-        "golden chest",
-        "field"
+        "field",
+        "drygrass",
+        "wheetfield"
       ],
       "threshold": 71,
       "enabled": true,
       "color": "#8A6F35",
-      "intensity": 7,
+      "intensity": 4,
       "dutyPercent": 100,
-      "cooldown": 8
+      "cooldown": 5
     }
   ]
 }
