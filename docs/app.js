@@ -1,6 +1,7 @@
 /* ScentBar Game Presets — landing page logic */
 (() => {
   const REPO_BASE = "https://github.com/loony2392/scentbar-game-presets/blob/main/presets/";
+  const RAW_PRESET_BASE = "https://raw.githubusercontent.com/loony2392/scentbar-game-presets/main/presets/";
   const DATA_BASE = "https://raw.githubusercontent.com/loony2392/scentbar-game-presets/main/";
 
   const scentGrid = document.getElementById("scent-grid");
@@ -56,7 +57,7 @@
           <h3>${escapeHtml(game)}</h3>
           <div class="profile-tags">
             ${profiles.map(p => `
-              <a class="profile-tag" href="${REPO_BASE}${p.file.split("/").map(encodeURIComponent).join("/")}" target="_blank" rel="noopener">
+              <a class="profile-tag" href="${RAW_PRESET_BASE}${p.file.split("/").map(encodeURIComponent).join("/")}" target="_blank" rel="noopener" download>
                 ${escapeHtml(p.profile)}<span class="arrow">›</span>
               </a>
             `).join("")}
